@@ -1,0 +1,31 @@
+{%extends "indexAdmin/index.html"%}
+{%load static%}
+
+{%block staticIndex%}
+    <link rel='stylesheet' href='{%static "css/indexAdmin/apps/users.css"%}'>
+{%endblock%}
+
+{%block contentIndex%}
+    <div class="apps">
+        <div class="app-user-create">
+            <div class="app-create-form app-form">
+                <h1>Alterar dados</h1>
+                <div class="container-entries">
+                    <div class="container-entry">
+                        <h3>Link compra</h3>
+                        <div class="container-input">
+                            <input type="text" name="link-buy" placeholder="https://www.google.com.br/" value="{{configs.link_buy}}">
+                        </div>
+                    </div>
+                    <div class="container-form-btn">
+                        <div class="btn-form-create btn-form">Atualizar</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{%endblock%}
+
+{%block scriptsIndex%}
+    <script src="{%static 'js/indexAdmin/apps/control.js'%}"></script>
+{%endblock%}
